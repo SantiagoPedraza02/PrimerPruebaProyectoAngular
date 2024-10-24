@@ -1,0 +1,52 @@
+/* Estilos para la tabla */
+table {
+    width: 80%;
+    margin: 0 auto;
+    border-collapse: collapse;
+  }
+  
+  table, th, td {
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  /* Estilos para los botones */
+  button {
+    background-color: #4CAF50; /* Verde */
+    border: none;
+    color: white;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  button:hover {
+    background-color: #45a049; /* Verde más oscuro */
+  }
+  
+  /* Estilos para el contenedor */
+  .container {
+    text-align: center;
+    margin-top: 30px;
+  }
+  
+  /* Estilos para el título */
+  h1 {
+    font-size: 36px;
+    text-align: center;
+    color: #673AB7; /* Color púrpura */
+  }
+  
+  h2 {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  

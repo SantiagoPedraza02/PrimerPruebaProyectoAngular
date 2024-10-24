@@ -1,0 +1,53 @@
+<div class="container">
+  <h2>Lista de Estudiantes</h2>
+
+  <!-- Tabla que lista a los estudiantes -->
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nombre</th>
+        <th>Edad</th>
+        <th>Email</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let student of students">
+        <td>{{ student.id }}</td>
+        <td>
+          <input type="text" [(ngModel)]="student.name" [readonly]="!isEditMode(student)" />
+        </td>
+        <td>
+          <input type="number" [(ngModel)]="student.age" [readonly]="!isEditMode(student)" />
+        </td>
+        <td>
+          <input type="email" [(ngModel)]="student.email" [readonly]="!isEditMode(student)" />
+        </td>
+        <td>
+          <button *ngIf="!isEditMode(student)" (click)="enableEditMode(student)">Editar</button>
+          <button *ngIf="isEditMode(student)" (click)="saveStudent(student)">Guardar</button>
+          <button (click)="deleteStudent(student.id)">Borrar</button>
+        </td>
+      </tr>
+
+      <!-- Fila para agregar un nuevo estudiante -->
+      <tr *ngIf="isAddMode">
+        <td>Nuevo</td>
+        <td><input type="text" [(ngModel)]="selectedStudent.name" /></td>
+        <td><input type="number" [(ngModel)]="selectedStudent.age" /></td>
+        <td><input type="email" [(ngModel)]="selectedStudent.email" /></td>
+        <td>
+          <button (click)="saveStudent()">Agregar</button>
+          <button (click)="cancel()">Cancelar</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Botón para añadir un nuevo estudiante -->
+  <button (click)="addNewStudent()" *ngIf="!isAddMode">Agregar Estudiante</button>
+</div>
+
+
+

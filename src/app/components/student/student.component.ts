@@ -9,7 +9,7 @@ import { Student } from '../../models/student.model';
 })
 export class StudentComponent implements OnInit {
   students: Student[] = [];
-  selectedStudent: Student = { id: 0, name: '', age: 0, email: '' };
+  selectedStudent: Student = { id: 0, jobTitle: '',firstName:'', lastName:'', emailAdress: '' };
   editingStudentId: number | null = null;
   isAddMode = false;
 
@@ -64,7 +64,7 @@ export class StudentComponent implements OnInit {
 
   // Agregar un nuevo estudiante
   addNewStudent() {
-    this.selectedStudent = { id: 0, name: '', age: 0, email: '' };
+    this.selectedStudent = { id: 0, jobTitle: '',firstName:'', lastName:'', emailAdress: '' };
     this.isAddMode = true;
   }
 
@@ -75,7 +75,7 @@ export class StudentComponent implements OnInit {
 
   // Resetear el formulario y cancelar modos
   resetForm() {
-    this.selectedStudent = { id: 0, name: '', age: 0, email: '' };
+    this.selectedStudent = { id: 0, jobTitle: '',firstName:'', lastName:'', emailAdress: '' };
     this.isAddMode = false;
     this.cancelEditMode();
   }

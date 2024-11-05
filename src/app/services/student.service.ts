@@ -7,7 +7,7 @@ import { Student } from '../models/student.model';
   providedIn: 'root'
 })
 export class StudentService {
-  private apiUrl = 'https://retoolapi.dev/i6VNCo/data';
+  private apiUrl = 'https://retoolapi.dev/UGbqO6/student';
 
   constructor(private http: HttpClient) {}
 

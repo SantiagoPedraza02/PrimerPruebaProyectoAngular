@@ -1,52 +1,120 @@
-/* Estilos para la tabla */
+/* Estilos generales */
+body {
+  font-family: 'Noto Serif JP', serif; /* Una fuente inspirada en estilos orientales */
+  background-color: #f2ebe3; /* Fondo de tono beige claro */
+  color: #333;
+  margin: 0;
+  padding: 20px;
+}
+
+/* Contenedor */
+.container {
+  text-align: center;
+  max-width: 1000px;
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  border: 2px solid #e8d8c3;
+}
+
+/* Título */
+h2 {
+  text-align: center;
+  color: #d32f2f;
+  border-bottom: 2px solid #d32f2f;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+/* Tabla */
 table {
-    width: 80%;
-    margin: 0 auto;
-    border-collapse: collapse;
-  }
-  
-  table, th, td {
-    border: 1px solid black;
-    padding: 10px;
-    text-align: center;
-  }
-  
-  /* Estilos para los botones */
-  button {
-    background-color: #4CAF50; /* Verde */
-    border: none;
-    color: white;
-    padding: 8px 16px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 14px;
-    margin: 4px 2px;
-    cursor: pointer;
-    border-radius: 5px;
-  }
-  
-  button:hover {
-    background-color: #45a049; /* Verde más oscuro */
-  }
-  
-  /* Estilos para el contenedor */
-  .container {
-    text-align: center;
-    margin-top: 30px;
-  }
-  
-  /* Estilos para el título */
-  h1 {
-    font-size: 36px;
-    text-align: center;
-    color: #673AB7; /* Color púrpura */
-  }
-  
-  h2 {
-    font-size: 24px;
-    text-align: center;
-    margin-bottom: 20px;
-    color: #333;
-  }
+  align-content: center;
+  width: 100%;
+  border-collapse: collapse;
+
+}
+
+table, th, td {
+  border: 1px solid #e8d8c3;
+}
+
+th, td {
+  padding: 12px;
+  text-align: center;
+}
+
+thead {
+  background-color: #d32f2f;
+  color: #fff;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f9f3ec;
+}
+
+/* Estilos de input */
+input[type="text"], input[type="email"] {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #e8d8c3;
+  border-radius: 5px;
+  background-color: #f9f3ec;
+}
+
+input[readonly] {
+  background-color: #f2ebe3;
+  color: #888;
+}
+
+/* Botones */
+button {
+  padding: 8px 16px;
+  margin: 5px;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+button[ng-click="addNewStudent"] {
+  background-color: #d32f2f;
+  color: #fff;
+}
+
+button[ng-click="enableEditMode"] {
+  background-color: #d3a32f; /* Dorado oscuro */
+  color: #fff;
+}
+
+button[ng-click="saveStudent"] {
+  background-color: #4caf50; /* Verde */
+  color: #fff;
+}
+
+button[ng-click="deleteStudent"] {
+  background-color: #d32f2f;
+  color: #fff;
+}
+
+/* Fila de "Nuevo Estudiante" */
+tr[ng-if="isAddMode"] {
+  background-color: #f9f3ec;
+}
+
+/* Estilo para el hover en filas */
+tbody tr:hover {
+  background-color: #ffe0b2;
+}
+
   
